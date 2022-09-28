@@ -9,7 +9,7 @@ if [[ -z "${NAME}" ]]; then
   exit 64  # EX_USAGE
 fi
 WDIR=".github/workflows"
-FILE=${WDIR}"/"${NAME}".yaml"
+FILE="${WDIR}/${NAME}.yaml"
 BRANCH="${2:-main}"
 TESTS="${3:-Write_some_tests!}"  # test for this file: ./skelworkflow.sh testskel main "./skelworkflow.sh testskel main"
 WF=$(cat <<EOF
@@ -39,4 +39,4 @@ jobs:
 EOF
 )
 mkdir -p ${WDIR}
-echo "${WF}" > ${FILE}
+echo "${WF}" > "${FILE}"
