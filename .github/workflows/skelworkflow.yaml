@@ -17,7 +17,7 @@ jobs:
         run: sudo apt-get install -y shellcheck
 
       - name: "Lint script"
-        run: shellcheck skelworkflow
+        run: shellcheck skelworkflow.sh
 
       - name: "Test for script"
         run: ./skelworkflow.sh testskel main
